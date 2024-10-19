@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".NuevoActivity">
+    tools:context=".VerActivity">
 
-    <!-- Agrega el Toolbar -->
+    <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -17,43 +18,63 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Nombre -->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/viewNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/datos" />
+        android:text="@string/hint_nombre" />
 
     <EditText
         android:id="@+id/txtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         android:ems="10"
-        android:hint="@string/hint_nombre"
-        android:inputType="text"
-        android:textSize="24sp" />
+        android:hint="Ingrese su nombre"
+        android:inputType="textPersonName"
+        android:textSize="18sp" />
+
+    <!-- Teléfono -->
+    <TextView
+        android:id="@+id/viewTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_telefono" />
 
     <EditText
         android:id="@+id/txtTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         android:ems="10"
-        android:hint="@string/hint_telefono"
+        android:hint="Ingrese su número de teléfono"
         android:inputType="phone"
-        android:textSize="24sp" />
+        android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/txtCorreo"
+    <!-- Correo -->
+    <TextView
+        android:id="@+id/viewCorreo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/hint_correo_electronico"
-        android:inputType="textEmailAddress"
-        android:textSize="24sp" />
+        android:text="@string/hint_correo_electronico" />
 
+    <EditText
+        android:id="@+id/txtCorreoElectronico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:ems="10"
+        android:hint="Ingrese su correo electrónico"
+        android:inputType="textEmailAddress"
+        android:textSize="18sp" />
+
+    <!-- Botón Guardar -->
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_guardar"
         android:textSize="24sp" />
+
 </LinearLayout>
